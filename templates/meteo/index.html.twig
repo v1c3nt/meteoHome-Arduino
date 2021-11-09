@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MeteoController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row col-10 offset-1">
+            <div class="card col-10 offset-1 col-md-6">
+                <div class="card-header">Terrasse</div>
+                <card class="card-body">
+                    <div>température : <h4>{{ terrasse.temperature }} °C</h4> </div>
+                    <div>taux d'humidité : <h4>{{ terrasse.humidite|number_format(0) }} %</h4></div>
+                </card>
+                <card class="card-footer"></card>
+            </div>
+        </div>
+    </div>
+{% endblock %}

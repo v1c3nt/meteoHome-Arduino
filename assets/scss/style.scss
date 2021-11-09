@@ -1,0 +1,35 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    margin-top: 2rem;
+    background-color: #00DBDE;
+    background-image: linear-gradient(135deg, #00DBDE 0%, #FC00FF 100%);
+    height: 100vh;
+}
+
+.card {
+  background-color: rgb(255,235,96, 16%);
+  border-radius: 5px;
+  color: #333;
+  font-family: sans-serif;
+  line-height: 1.5;
+  max-width: 50%;
+  padding: 1rem 2rem;
+  a {
+    color: #bf0222;
+  }
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .card {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);  
+  }
+  .warning {
+    display: none;
+  }
+}
+// dégrader temperature
+// background-color: #90f5f9;
+// background-image: linear-gradient(180deg, #90f5f9 0%, #6284FF 27%, #ffbd00 60%, #ff0000 100%);
