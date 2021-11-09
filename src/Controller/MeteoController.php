@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MeteoController extends AbstractController
 {
     /**
-     * @Route("/meteo", name="meteo")
+     * @Route("/", name="meteo")
      */
     public function index(ApiMeteoService $apiMeteo): Response
     {
