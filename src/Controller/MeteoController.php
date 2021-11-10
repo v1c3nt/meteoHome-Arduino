@@ -13,9 +13,9 @@ class MeteoController extends AbstractController
     /**
      * @Route("/", name="meteo")
      */
-    public function index(ApiMeteoService $apiMeteo): Response
+    public function index(ApiMeteoService $apiMeteo, String $terrasse): Response
     {
-        $terrasse = $apiMeteo->get('192.168.1.160/api')->meteo;
+        $terrasse = $apiMeteo->get($terrasse . '/api')->meteo;
 
         return $this->render('meteo/index.html.twig', [
             'controller_name' => 'Météo',
